@@ -1,11 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 84.93 s <<< FAILURE! -- in TestSuite
-com.saucedemo.tests.LoginTest_with_TestNG.loginTest[locked_out_user, secret_sauce](2) -- Time elapsed: 21.22 s <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 56.60 s <<< FAILURE! -- in TestSuite
+com.saucedemo.tests.LoginTest_with_TestNG.loginTest[locked_out_user, secret_sauce](2) -- Time elapsed: 25.65 s <<< FAILURE!
 java.lang.AssertionError: Login failed for locked_out_user : secret_sauce | Error: Epic sadface: Sorry, this user has been locked out.
 	at org.testng.Assert.fail(Assert.java:111)
-	at com.saucedemo.tests.LoginTest_with_TestNG.loginTest(LoginTest_with_TestNG.java:75)
+	at com.saucedemo.tests.LoginTest_with_TestNG.loginTest(LoginTest_with_TestNG.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

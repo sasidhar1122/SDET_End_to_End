@@ -3,6 +3,7 @@ package com.saucedemo.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +20,14 @@ public class LoginTest_with_TestNG {
     @BeforeMethod
     public void setup() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        // Headless Chrome for CI environments
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--window-size=1920,1080");
+
+        driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
@@ -36,7 +44,7 @@ public class LoginTest_with_TestNG {
     @Test(dataProvider = "users")
     public void loginTest(String username, String password) {
 
-        driver.get("https://www.saucedemo.com/v1/");
+        driver.get("https://www.saucedemo.com/");
         driver.manage().deleteAllCookies();
 
         driver.findElement(By.id("user-name")).clear();
@@ -71,7 +79,6 @@ public class LoginTest_with_TestNG {
             }
         } else {
             System.out.println("❌ FAIL -> " + username + " : " + password + " | Error: " + errorMessage);
-            // Mark test as failed in TestNG
             Assert.fail("Login failed for " + username + " : " + password + " | Error: " + errorMessage);
         }
     }
