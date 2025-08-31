@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Java CI with Maven + TestNG
 
 on:
@@ -5,21 +6,40 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+=======
+name: Selenium TestNG CI
+
+on:
+  push:
+    branches: [ "main" ]   # Runs on push to main branch
+  pull_request:
+    branches: [ "main" ]   # Runs on PR targeting main
+>>>>>>> 1e92c64fe8ddc4a7b2b52f2a01365994d1abcfb8
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+<<<<<<< HEAD
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up JDK 17
+=======
+      # Step 1: Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up JDK 17 (you can change to 11/21 if your project needs)
+      - name: Set up JDK
+>>>>>>> 1e92c64fe8ddc4a7b2b52f2a01365994d1abcfb8
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
+<<<<<<< HEAD
       - name: Build with Maven
         run: mvn -B clean test --file pom.xml
 
@@ -29,3 +49,21 @@ jobs:
         with:
           name: TestNG-Reports
           path: target/surefire-reports/
+=======
+      # Step 3: Cache Maven dependencies for faster builds
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2
+
+      # Step 4: Build project
+      - name: Build with Maven
+        run: mvn clean install -DskipTests
+
+      # Step 5: Run Selenium + TestNG tests
+      - name: Run Tests
+        run: mvn test
+>>>>>>> 1e92c64fe8ddc4a7b2b52f2a01365994d1abcfb8
