@@ -25,15 +25,8 @@
         <dependency>
            <groupId>org.testng</groupId>
            <artifactId>testng</artifactId>
-           <version>7.10.2</version>
+           <version>7.9.0</version>
            <scope>test</scope>
-        </dependency>
-        <!-- TestNG for testing -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
         </dependency>
 
         <!-- WebDriverManager (auto driver setup) -->
