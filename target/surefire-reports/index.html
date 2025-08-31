@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-SauceDemoLoginSuite" class="navigator-link">
-              <span class="suite-name border-failed">SauceDemoLoginSuite</span>
+              <span class="suite-name border-passed">SauceDemoLoginSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SauceDemoLoginSuite" class="hide-methods failed suite-SauceDemoLoginSuite"> (hide)</a> <!-- hide-methods failed suite-SauceDemoLoginSuite -->
-                      <a href="#" panel-name="suite-SauceDemoLoginSuite" class="show-methods failed suite-SauceDemoLoginSuite"> (show)</a> <!-- show-methods failed suite-SauceDemoLoginSuite -->
-                    </span>
-                    <div class="method-list-content failed suite-SauceDemoLoginSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(locked_out_user, secret_sauce)">loginTest(locked_out_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-SauceDemoLoginSuite -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,17 +103,22 @@
                     <div class="method-list-content passed suite-SauceDemoLoginSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(standard_user, secret_sauce)">loginTest(standard_user, secret_sauce)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(problem_user, secret_sauce)">loginTest(problem_user, secret_sauce)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(performance_glitch_user, secret_sauce)">loginTest(performance_glitch_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(standard_user, secret_sauce)">loginTest(standard_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SauceDemoLoginSuite" title="com.saucedemo.tests.LoginTest_with_TestNG" class="method navigator-link" hash-for-method="loginTest(locked_out_user, secret_sauce)">loginTest(locked_out_user, secret_sauce)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SauceDemoLoginSuite -->
@@ -142,45 +133,12 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SauceDemoLoginSuite" class="panel SauceDemoLoginSuite">
-          <div class="suite-SauceDemoLoginSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.saucedemo.tests.LoginTest_with_TestNG</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest(locked_out_user, secret_sauce)">
-                  </a> <!-- loginTest(locked_out_user, secret_sauce) -->
-                  <span class="method-name">loginTest</span>
-                  <span class="parameters">(locked_out_user,secret_sauce)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Login failed for locked_out_user : secret_sauce | Error: Epic sadface: Sorry, this user has been locked out.
-	at com.saucedemo.tests.LoginTest_with_TestNG.loginTest(LoginTest_with_TestNG.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
-... Removed 18 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SauceDemoLoginSuite-class-failed -->
           <div class="suite-SauceDemoLoginSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.saucedemo.tests.LoginTest_with_TestNG</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginTest(standard_user, secret_sauce)">
-                  </a> <!-- loginTest(standard_user, secret_sauce) -->
-                  <span class="method-name">loginTest</span>
-                  <span class="parameters">(standard_user,secret_sauce)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="loginTest(problem_user, secret_sauce)">
@@ -195,6 +153,22 @@
                   </a> <!-- loginTest(performance_glitch_user, secret_sauce) -->
                   <span class="method-name">loginTest</span>
                   <span class="parameters">(performance_glitch_user,secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(standard_user, secret_sauce)">
+                  </a> <!-- loginTest(standard_user, secret_sauce) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(standard_user,secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginTest(locked_out_user, secret_sauce)">
+                  </a> <!-- loginTest(locked_out_user, secret_sauce) -->
+                  <span class="method-name">loginTest</span>
+                  <span class="parameters">(locked_out_user,secret_sauce)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -255,24 +229,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.saucedemo.tests.LoginTest_with_TestNG')
-data.setCell(0, 3, 25687);
+data.setCell(0, 3, 25316);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginTest')
 data.setCell(1, 2, 'com.saucedemo.tests.LoginTest_with_TestNG')
-data.setCell(1, 3, 12796);
+data.setCell(1, 3, 10556);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginTest')
 data.setCell(2, 2, 'com.saucedemo.tests.LoginTest_with_TestNG')
-data.setCell(2, 3, 6723);
+data.setCell(2, 3, 5790);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'loginTest')
 data.setCell(3, 2, 'com.saucedemo.tests.LoginTest_with_TestNG')
-data.setCell(3, 3, 6676);
+data.setCell(3, 3, 5727);
 window.suiteTableData['SauceDemoLoginSuite']= { tableData: data, tableDiv: 'times-div-SauceDemoLoginSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 56 seconds</span>
+              <span class="suite-total-time">Total running time: 51 seconds</span>
               <div id="times-div-SauceDemoLoginSuite">
               </div> <!-- times-div-SauceDemoLoginSuite -->
             </div> <!-- times-div -->
@@ -305,49 +279,47 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(standard_user, secret_sauce)</span>
-                <span class="method-start">1490 ms</span>
+                <span class="method-start">1504 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8215 ms</span>
+                <span class="method-start">7234 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">8364 ms</span>
+                <span class="method-start">7411 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">loginTest(locked_out_user, secret_sauce)</span>
-                <span class="method-start">9092 ms</span>
+                <span class="method-start">8175 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34784 ms</span>
+                <span class="method-start">33492 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">35004 ms</span>
+                <span class="method-start">33741 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(problem_user, secret_sauce)</span>
-                <span class="method-start">35734 ms</span>
+                <span class="method-start">34478 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42410 ms</span>
+                <span class="method-start">40269 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">42535 ms</span>
+                <span class="method-start">40411 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginTest(performance_glitch_user, secret_sauce)</span>
-                <span class="method-start">43202 ms</span>
+                <span class="method-start">41181 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">55998 ms</span>
+                <span class="method-start">51737 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

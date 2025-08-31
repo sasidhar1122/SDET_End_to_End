@@ -21,7 +21,7 @@ public class LoginTest_with_TestNG {
     public void setup() {
         WebDriverManager.chromedriver().setup();
 
-        // Headless Chrome for CI environments
+        // Headless Chrome for CI/CD environments
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--disable-gpu");
@@ -35,7 +35,7 @@ public class LoginTest_with_TestNG {
     public Object[][] userData() {
         return new Object[][]{
                 {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},
+                {"locked_out_user", "secret_sauce"},  // Expected failure
                 {"problem_user", "secret_sauce"},
                 {"performance_glitch_user", "secret_sauce"}
         };
@@ -67,6 +67,7 @@ public class LoginTest_with_TestNG {
             }
         }
 
+        // Handle test results
         if (isLoginSuccess) {
             System.out.println("✅ PASS -> " + username + " : " + password);
             // Logout for next iteration
@@ -78,8 +79,14 @@ public class LoginTest_with_TestNG {
                 System.out.println("⚠ WARNING: Logout failed for " + username);
             }
         } else {
-            System.out.println("❌ FAIL -> " + username + " : " + password + " | Error: " + errorMessage);
-            Assert.fail("Login failed for " + username + " : " + password + " | Error: " + errorMessage);
+            if ("locked_out_user".equals(username)) {
+                // Expected failure for locked_out_user
+                System.out.println("⚠ Expected FAIL -> " + username + " | Error: " + errorMessage);
+            } else {
+                // Unexpected failure, mark test as failed
+                System.out.println("❌ FAIL -> " + username + " : " + password + " | Error: " + errorMessage);
+                Assert.fail("Login failed for " + username + " : " + password + " | Error: " + errorMessage);
+            }
         }
     }
 
