@@ -1,27 +1,31 @@
-name Java CI with Maven
+name: Java CI with Maven + TestNG
 
-on
-  push
-    branches [ main ]
-  pull_request
-    branches [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-jobs
-  build
-    runs-on ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-    steps
-    - name Checkout repository
-      uses actionscheckout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name Set up JDK 17
-      uses actionssetup-java@v3
-      with
-        java-version '17'
-        distribution 'temurin'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name Build with Maven
-      run mvn -B package --file pom.xml
+      - name: Build with Maven
+        run: mvn -B clean test --file pom.xml
 
-    - name Run Tests
-      run mvn test
+      - name: Upload TestNG Reports
+        if: always()   # ensures reports upload even if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: TestNG-Reports
+          path: target/surefire-reports/
