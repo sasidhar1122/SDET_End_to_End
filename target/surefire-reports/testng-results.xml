@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-31T17:49:56 IST" name="SauceDemoLoginSuite" finished-at="2025-08-31T17:51:20 IST" duration-ms="84468">
+    <groups>
+    </groups>
+    <test started-at="2025-08-31T17:49:56 IST" name="LoginTests" finished-at="2025-08-31T17:51:20 IST" duration-ms="84468">
+      <class name="com.saucedemo.tests.LoginTest_with_TestNG">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:49:56 IST" name="setup" finished-at="2025-08-31T17:49:58 IST" duration-ms="1581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:49:58 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T17:50:33 IST" duration-ms="35674" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:33 IST" name="tearDown" finished-at="2025-08-31T17:50:33 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:33 IST" name="setup" finished-at="2025-08-31T17:50:34 IST" duration-ms="996" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:34 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T17:50:56 IST" duration-ms="21213" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[locked_out_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Login failed for locked_out_user : secret_sauce | Error: Epic sadface: Sorry, this user has been locked out.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Login failed for locked_out_user : secret_sauce | Error: Epic sadface: Sorry, this user has been locked out.
+at org.testng.Assert.fail(Assert.java:111)
+at com.saucedemo.tests.LoginTest_with_TestNG.loginTest(LoginTest_with_TestNG.java:75)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:840)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:56 IST" name="tearDown" finished-at="2025-08-31T17:50:57 IST" duration-ms="1327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:57 IST" name="setup" finished-at="2025-08-31T17:50:58 IST" duration-ms="809" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:50:58 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T17:51:02 IST" duration-ms="4610" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:51:02 IST" name="tearDown" finished-at="2025-08-31T17:51:03 IST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:51:03 IST" name="setup" finished-at="2025-08-31T17:51:03 IST" duration-ms="715" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:51:03 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T17:51:20 IST" duration-ms="16885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[performance_glitch_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T17:51:20 IST" name="tearDown" finished-at="2025-08-31T17:51:20 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.tests.LoginTest_with_TestNG -->
+    </test> <!-- LoginTests -->
+  </suite> <!-- SauceDemoLoginSuite -->
+</testng-results>

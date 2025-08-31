@@ -7,6 +7,7 @@
     <groupId>com.sasidhar.saucedemo</groupId>
     <artifactId>saucedemo-tests</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>   <!-- 👈 Add this -->
     <name>SauceDemo Automation</name>
 
     <properties>
@@ -22,28 +23,23 @@
             <artifactId>selenium-java</artifactId>
             <version>4.25.0</version>
         </dependency>
+
+        <!-- TestNG -->
         <dependency>
            <groupId>org.testng</groupId>
            <artifactId>testng</artifactId>
-           <version>7.10.2</version>
+           <version>7.9.0</version>
            <scope>test</scope>
         </dependency>
-        <!-- TestNG for testing -->
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.10.2</version>
-            <scope>test</scope>
-        </dependency>
 
-        <!-- WebDriverManager (auto driver setup) -->
+        <!-- WebDriverManager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
 
-        <!-- SLF4J simple binding (fixes logging warning) -->
+        <!-- SLF4J simple binding -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>

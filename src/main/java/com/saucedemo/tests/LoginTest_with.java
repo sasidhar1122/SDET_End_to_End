@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class LoginTest_with_TestNG {
+public class LoginTest_with {
 
     private WebDriver driver;
     private WebDriverWait wait;
