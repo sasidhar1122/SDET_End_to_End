@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-31T18:20:52 IST" name="SauceDemoLoginSuite" finished-at="2025-08-31T18:21:44 IST" duration-ms="51895">
+  <suite started-at="2025-09-01T12:39:39 IST" name="SauceDemoLoginSuite" finished-at="2025-09-01T12:40:19 IST" duration-ms="39350">
     <groups>
     </groups>
-    <test started-at="2025-08-31T18:20:52 IST" name="LoginTests" finished-at="2025-08-31T18:21:44 IST" duration-ms="51895">
+    <test started-at="2025-09-01T12:39:39 IST" name="LoginTests" finished-at="2025-09-01T12:40:19 IST" duration-ms="39350">
       <class name="com.saucedemo.tests.LoginTest_with_TestNG">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:20:52 IST" name="setup" finished-at="2025-08-31T18:20:54 IST" duration-ms="1503" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:39:39 IST" name="setup" finished-at="2025-09-01T12:39:42 IST" duration-ms="2640" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:20:54 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T18:21:00 IST" duration-ms="5727" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:39:42 IST" name="loginTest" data-provider="users" finished-at="2025-09-01T12:39:45 IST" duration-ms="2540" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:00 IST" name="tearDown" finished-at="2025-08-31T18:21:00 IST" duration-ms="176" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:39:45 IST" name="tearDown" finished-at="2025-09-01T12:39:45 IST" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:00 IST" name="setup" finished-at="2025-08-31T18:21:00 IST" duration-ms="764" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:39:45 IST" name="setup" finished-at="2025-09-01T12:39:45 IST" duration-ms="605" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:00 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T18:21:26 IST" duration-ms="25316" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:39:45 IST" name="loginTest" data-provider="users" finished-at="2025-09-01T12:40:07 IST" duration-ms="21446" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -51,15 +51,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:26 IST" name="tearDown" finished-at="2025-08-31T18:21:26 IST" duration-ms="249" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:07 IST" name="tearDown" finished-at="2025-09-01T12:40:08 IST" duration-ms="1285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:26 IST" name="setup" finished-at="2025-08-31T18:21:27 IST" duration-ms="736" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:08 IST" name="setup" finished-at="2025-09-01T12:40:09 IST" duration-ms="587" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:27 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T18:21:33 IST" duration-ms="5790" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:09 IST" name="loginTest" data-provider="users" finished-at="2025-09-01T12:40:11 IST" duration-ms="2196" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,15 +75,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:33 IST" name="tearDown" finished-at="2025-08-31T18:21:33 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:11 IST" name="tearDown" finished-at="2025-09-01T12:40:11 IST" duration-ms="125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:33 IST" name="setup" finished-at="2025-08-31T18:21:33 IST" duration-ms="770" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:11 IST" name="setup" finished-at="2025-09-01T12:40:11 IST" duration-ms="589" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:33 IST" name="loginTest" data-provider="users" finished-at="2025-08-31T18:21:44 IST" duration-ms="10556" status="PASS">
+        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:11 IST" name="loginTest" data-provider="users" finished-at="2025-09-01T12:40:19 IST" duration-ms="7040" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +99,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@c33b74f]" started-at="2025-08-31T18:21:44 IST" name="tearDown" finished-at="2025-08-31T18:21:44 IST" duration-ms="128" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.saucedemo.tests.LoginTest_with_TestNG@61df66b6]" started-at="2025-09-01T12:40:19 IST" name="tearDown" finished-at="2025-09-01T12:40:19 IST" duration-ms="137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
