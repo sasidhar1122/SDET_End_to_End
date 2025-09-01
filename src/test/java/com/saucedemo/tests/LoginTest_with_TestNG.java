@@ -1,7 +1,8 @@
 package com.saucedemo.tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import com.aventstack.extentreports.*;
+import com.saucedemo.utils.ExtentReportManager;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -16,6 +17,13 @@ public class LoginTest_with_TestNG {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    private static ExtentReports extent;
+    private ExtentTest test;
+
+    @BeforeSuite
+    public void startReport() {
+        extent = ExtentReportManager.getInstance();
+    }
 
     @BeforeMethod
     public void setup() {
@@ -23,9 +31,7 @@ public class LoginTest_with_TestNG {
 
         // Headless Chrome for CI/CD environments
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080");
 
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -34,15 +40,16 @@ public class LoginTest_with_TestNG {
     @DataProvider(name = "users", parallel = false)
     public Object[][] userData() {
         return new Object[][]{
-                {"standard_user", "secret_sauce"},
-                {"locked_out_user", "secret_sauce"},  // Expected failure
-                {"problem_user", "secret_sauce"},
-                {"performance_glitch_user", "secret_sauce"}
+                {"standard_user", "secret_sauce", true},
+                {"locked_out_user", "secret_sauce", false}, // Expected fail
+                {"problem_user", "secret_sauce", true},
+                {"performance_glitch_user", "secret_sauce", true}
         };
     }
 
     @Test(dataProvider = "users")
-    public void loginTest(String username, String password) {
+    public void loginTest(String username, String password, boolean expectedSuccess) {
+        test = extent.createTest("Login Test - " + username);
 
         driver.get("https://www.saucedemo.com/");
         driver.manage().deleteAllCookies();
@@ -67,31 +74,39 @@ public class LoginTest_with_TestNG {
             }
         }
 
-        // Handle test results
-        if (isLoginSuccess) {
-            System.out.println("✅ PASS -> " + username + " : " + password);
-            // Logout for next iteration
-            try {
-                driver.findElement(By.id("react-burger-menu-btn")).click();
-                wait.until(ExpectedConditions.elementToBeClickable(By.id("logout_sidebar_link")));
-                driver.findElement(By.id("logout_sidebar_link")).click();
-            } catch (Exception logoutEx) {
-                System.out.println("⚠ WARNING: Logout failed for " + username);
+        // ✅ Validate against expected outcome
+        if (isLoginSuccess == expectedSuccess) {
+            test.pass("✅ " + username + " -> Test passed as expected");
+            System.out.println("✅ " + username + " -> Test passed as expected");
+
+            if (isLoginSuccess) {
+                try {
+                    driver.findElement(By.id("react-burger-menu-btn")).click();
+                    wait.until(ExpectedConditions.elementToBeClickable(By.id("logout_sidebar_link")));
+                    driver.findElement(By.id("logout_sidebar_link")).click();
+                } catch (Exception logoutEx) {
+                    test.warning("⚠ Logout failed for " + username);
+                }
             }
         } else {
-            if ("locked_out_user".equals(username)) {
-                // Expected failure for locked_out_user
-                System.out.println("⚠ Expected FAIL -> " + username + " | Error: " + errorMessage);
-            } else {
-                // Unexpected failure, mark test as failed
-                System.out.println("❌ FAIL -> " + username + " : " + password + " | Error: " + errorMessage);
-                Assert.fail("Login failed for " + username + " : " + password + " | Error: " + errorMessage);
-            }
+            test.fail("❌ " + username + " -> Test failed. Expected: " + expectedSuccess +
+                      " | Actual: " + isLoginSuccess + " | Error: " + errorMessage);
+            Assert.fail("Login validation failed for " + username +
+                        " | Expected success=" + expectedSuccess +
+                        " | Actual success=" + isLoginSuccess +
+                        " | Error: " + errorMessage);
         }
     }
 
     @AfterMethod
     public void tearDown() {
         if (driver != null) driver.quit();
+    }
+
+    @AfterSuite
+    public void flushReport() {
+        if (extent != null) {
+            extent.flush();
+        }
     }
 }
